@@ -9,18 +9,12 @@ Anggota Kelompok :
 
 Informatika 2024 Kelas C
 
-## Class Diagram
-
-*comming soon*
-
 ## Bussines Process
 
 *comming soon*
 
-## Implementasi Program dalam Bahasa Java
+## Class Diagram
 
-Struktur folder :
-
-- 
-- 
-- 
+<p align="center">
+  <img src="./img/PBO-class-diagram.png" width="400">
+</p>
