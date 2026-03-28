@@ -33,12 +33,13 @@ public class SegiTiga extends BangunDatar {
     }
 
     // ====== METHOD LAINNYA ======
-    public void getKeliling(){
-
+    public double getKeliling(){
+        double sisiMiring = Math.sqrt(Math.pow(alas, 2) + Math.pow(tinggi, 2));
+        return alas + 2 * sisiMiring; 
     }
 
-    public void getLuas(){
-
+    public double getLuas(){
+        return 0.5 * alas * tinggi;
     }
 
     public void printDetail(){
