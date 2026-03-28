@@ -38,7 +38,7 @@ public abstract class BangunDatar {
     }
 
     // ====== METHOD LAINNYA ======
-    abstract public void getKeliling();
-    abstract public void getLuas();
+    abstract public double getKeliling();
+    abstract public double getLuas();
     abstract public void printDetail();
 }

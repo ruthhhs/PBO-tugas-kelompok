@@ -23,14 +23,16 @@ public class BujurSangkar extends BangunDatar {
     }
 
     // ====== METHOD LAINNYA ======
-    // public double getDiagonal();
+    public double getDiagonal(){
+        return sisi * Math.sqrt(2);
+    };
 
-    public void getKeliling(){
-
+    public double getKeliling(){
+        return 4 * sisi;
     }
 
-    public void getLuas(){
-
+    public double getLuas(){
+        return sisi * sisi;
     }
 
     public void printDetail(){

@@ -33,14 +33,16 @@ public class PersegiPanjang extends BangunDatar {
     }
 
     // ====== METHOD LAINNYA ======
-    // public double getDiagonal();
+    public double getDiagonal(){
+        return Math.sqrt(Math.pow(panjang, 2) + Math.pow(lebar, 2));
+    };
 
-    public void getKeliling(){
-
+    public double getKeliling(){
+        return 2 * (panjang + lebar);
     }
 
-    public void getLuas(){
-
+    public double getLuas(){
+        return panjang * lebar;
     }
 
     public void printDetail(){
