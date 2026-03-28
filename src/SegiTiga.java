@@ -34,7 +34,7 @@ public class SegiTiga extends BangunDatar {
 
     // ====== METHOD LAINNYA ======
     public double getKeliling(){
-        double sisiMiring = Math.sqrt(Math.pow(alas, 2) + Math.pow(tinggi, 2));
+        double sisiMiring = Math.sqrt(Math.pow(alas / 2, 2) + Math.pow(tinggi, 2));
         return alas + 2 * sisiMiring; 
     }
 

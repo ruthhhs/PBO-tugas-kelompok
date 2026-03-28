@@ -13,6 +13,10 @@ public class Prisma extends BangunRuang {
     
     public Prisma(SegiTiga sisiAlas, PersegiPanjang sisiTegak){
         super(5, 9);
+        double l = Math.sqrt(Math.pow(sisiAlas.getAlas() / 2, 2) + Math.pow(sisiAlas.getTinggi(), 2));;
+        if (sisiTegak.getLebar() != l) {
+            throw new IllegalArgumentException("Ukuran sisi tidak konsisten untuk membentuk prisma");
+        }
         this.sisiAlas = sisiAlas;
         this.sisiTegak = sisiTegak;
     }
@@ -37,13 +41,13 @@ public class Prisma extends BangunRuang {
 
     // ====== METHOD LAINNYA ======
     @Override
-    public void getLuasPermukaan(){
-
+    public double getLuasPermukaan(){
+        return (2 * sisiAlas.getLuas()) + (sisiAlas.getKeliling() * sisiTegak.getPanjang());
     }
 
     @Override
-    public void getVolume(){
-        
+    public double getVolume(){
+        return sisiAlas.getLuas() * sisiTegak.getPanjang();
     }
 
     @Override

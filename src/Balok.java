@@ -2,6 +2,7 @@ public class Balok extends BangunRuang {
     // ====== ATRIBUT ======
     private PersegiPanjang sisiAlas;
     private PersegiPanjang sisiTegak;
+    private PersegiPanjang sisiDepan;
 
     // ====== METHOD KONSTRUKTOR ======
     public Balok(){
@@ -9,12 +10,22 @@ public class Balok extends BangunRuang {
         setJumlahRusuk(12);
         this.sisiAlas = new PersegiPanjang();
         this.sisiTegak = new PersegiPanjang();
+        this.sisiDepan = new PersegiPanjang();
     }
     
-    public Balok(PersegiPanjang sisiAlas, PersegiPanjang sisiTegak){
+    public Balok(PersegiPanjang sisiAlas, PersegiPanjang sisiTegak, PersegiPanjang sisiDepan){
         super(6, 12);
+        double p = sisiAlas.getPanjang();
+        double l = sisiAlas.getLebar();
+        double t = sisiTegak.getLebar();
+        if (sisiTegak.getPanjang() != l || 
+            sisiDepan.getPanjang() != p || 
+            sisiDepan.getLebar() != t) {
+            throw new IllegalArgumentException("Ukuran sisi tidak konsisten untuk membentuk balok");
+        }
         this.sisiAlas = sisiAlas;
         this.sisiTegak = sisiTegak;
+        this.sisiDepan = sisiDepan;
     }
 
     // ====== METHOD SELEKTOR ======
@@ -26,6 +37,10 @@ public class Balok extends BangunRuang {
         return sisiTegak;
     }
 
+    public PersegiPanjang getSisiDepan(){
+        return sisiDepan;
+    }
+
     // ====== METHOD MUTATOR  ======
     public void setSisiAlas(PersegiPanjang sisiAlas){
         this.sisiAlas = sisiAlas;
@@ -35,17 +50,25 @@ public class Balok extends BangunRuang {
         this.sisiTegak = sisiTegak;
     }
 
+    public void setSisiDepan(PersegiPanjang sisiDepan){
+        this.sisiDepan = sisiDepan;
+    }
+
     // ====== METHOD LAINNYA ======
-    // public void getDiagonalRuang();
-
-    @Override
-    public void getLuasPermukaan(){
-
+    public double getDiagonalRuang(){
+        return Math.sqrt(Math.pow(sisiAlas.getPanjang(), 2)
+                        + Math.pow(sisiAlas.getLebar(), 2)
+                        + Math.pow(sisiTegak.getLebar(), 2));
     }
 
     @Override
-    public void getVolume(){
-        
+    public double getLuasPermukaan(){
+        return 2 * (sisiAlas.getLuas() + sisiTegak.getLuas() + sisiDepan.getLuas());
+    }
+
+    @Override
+    public double getVolume(){
+        return sisiAlas.getLuas() * sisiTegak.getLebar();
     }
 
     @Override

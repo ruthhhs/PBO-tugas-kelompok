@@ -25,16 +25,18 @@ public class Kubus extends BangunRuang {
     }
 
     // ====== METHOD LAINNYA ======
-    // public void getDiagonalRuang();
-
-    @Override
-    public void getLuasPermukaan(){
-
+    public double getDiagonalRuang(){
+        return sisi.getSisi() * Math.sqrt(3);
     }
 
     @Override
-    public void getVolume(){
-        
+    public double getLuasPermukaan(){
+        return 6 * Math.pow(sisi.getSisi(), 2);
+    }
+
+    @Override
+    public double getVolume(){
+        return Math.pow(sisi.getSisi(), 3);
     }
 
     @Override

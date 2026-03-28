@@ -38,7 +38,7 @@ public abstract class BangunRuang {
     }
 
     // ====== METHOD LAINNYA ======
-    abstract public void getLuasPermukaan();
-    abstract public void getVolume();
+    abstract public double getLuasPermukaan();
+    abstract public double getVolume();
     abstract public void printDetail();
 }
