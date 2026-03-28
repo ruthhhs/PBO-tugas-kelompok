@@ -36,14 +36,17 @@ public class Prisma extends BangunRuang {
     }
 
     // ====== METHOD LAINNYA ======
+    @Override
     public void getLuasPermukaan(){
 
     }
 
+    @Override
     public void getVolume(){
         
     }
 
+    @Override
     public void printDetail(){
 
     }

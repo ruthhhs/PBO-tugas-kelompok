@@ -38,14 +38,17 @@ public class Balok extends BangunRuang {
     // ====== METHOD LAINNYA ======
     // public void getDiagonalRuang();
 
+    @Override
     public void getLuasPermukaan(){
 
     }
 
+    @Override
     public void getVolume(){
         
     }
 
+    @Override
     public void printDetail(){
 
     }
