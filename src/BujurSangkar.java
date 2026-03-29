@@ -7,7 +7,7 @@ public class BujurSangkar extends BangunDatar {
         setJumlahSisi(4);
     }
     
-    public BujurSangkar(String warna, int sisi){
+    public BujurSangkar(String warna, double sisi){
         super(4, warna);
         this.sisi = sisi;
     }

@@ -13,12 +13,11 @@ public class Prisma extends BangunRuang {
     
     public Prisma(SegiTiga sisiAlas, PersegiPanjang sisiTegak){
         super(5, 9);
-        double l = Math.sqrt(Math.pow(sisiAlas.getAlas() / 2, 2) + Math.pow(sisiAlas.getTinggi(), 2));;
-        if (sisiTegak.getLebar() != l) {
-            throw new IllegalArgumentException("Ukuran sisi tidak konsisten untuk membentuk prisma");
-        }
         this.sisiAlas = sisiAlas;
         this.sisiTegak = sisiTegak;
+        if (!isValidPrisma()) {
+            throw new IllegalArgumentException("Ukuran prisma tidak valid");
+        }
     }
 
     // ====== METHOD SELEKTOR ======
@@ -40,6 +39,11 @@ public class Prisma extends BangunRuang {
     }
 
     // ====== METHOD LAINNYA ======
+    public boolean isValidPrisma(){
+        double l = Math.sqrt(Math.pow(sisiAlas.getAlas() / 2, 2) + Math.pow(sisiAlas.getTinggi(), 2));
+        return (sisiTegak.getLebar() == l);
+
+    }
     @Override
     public double getLuasPermukaan(){
         return (2 * sisiAlas.getLuas()) + (sisiAlas.getKeliling() * sisiTegak.getPanjang());

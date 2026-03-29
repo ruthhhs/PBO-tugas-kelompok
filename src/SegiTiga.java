@@ -8,7 +8,7 @@ public class SegiTiga extends BangunDatar {
         setJumlahSisi(4);
     }
 
-    public SegiTiga(String warna, int alas, int tinggi){
+    public SegiTiga(String warna, double alas, double tinggi){
         super(4, warna);
         this.alas = alas;
         this.tinggi = tinggi;

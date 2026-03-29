@@ -8,7 +8,7 @@ public class PersegiPanjang extends BangunDatar {
         setJumlahSisi(4);
     }
 
-    public PersegiPanjang(String warna, int panjang, int lebar){
+    public PersegiPanjang(String warna, double panjang, double lebar){
         super(4, warna);
         this.panjang = panjang;
         this.lebar = lebar;

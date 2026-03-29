@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        // check
         Kubus k = new Kubus(new BujurSangkar("black", 10));
         System.out.println(k.getSisi().getSisi());
         System.out.println(k.getLuasPermukaan());
@@ -14,6 +15,15 @@ public class Main {
         System.out.println(b.getVolume());
         System.out.println(b.getDiagonalRuang());
         System.out.println(b.getSisiAlas().getDiagonal());
+
+        Balok b1 = new Balok();
+        b1.setSisiAlas(new PersegiPanjang("black", 20, 2));
+        b1.setSisiTegak(new PersegiPanjang("black", 2, 2));
+        b1.setSisiDepan(new PersegiPanjang("black", 20, 2));
+        System.out.println(b1.getVolume());
+        System.out.println(b1.getDiagonalRuang());
+        System.out.println(b1.getSisiAlas().getDiagonal());
+        System.out.println(b1.isValidBalok());
 
         Prisma p = new Prisma(new SegiTiga("black", 6, 4), new PersegiPanjang("black", 10, 5));
         System.out.println(p.getLuasPermukaan());

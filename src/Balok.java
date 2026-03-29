@@ -15,17 +15,12 @@ public class Balok extends BangunRuang {
     
     public Balok(PersegiPanjang sisiAlas, PersegiPanjang sisiTegak, PersegiPanjang sisiDepan){
         super(6, 12);
-        double p = sisiAlas.getPanjang();
-        double l = sisiAlas.getLebar();
-        double t = sisiTegak.getLebar();
-        if (sisiTegak.getPanjang() != l || 
-            sisiDepan.getPanjang() != p || 
-            sisiDepan.getLebar() != t) {
-            throw new IllegalArgumentException("Ukuran sisi tidak konsisten untuk membentuk balok");
-        }
         this.sisiAlas = sisiAlas;
         this.sisiTegak = sisiTegak;
         this.sisiDepan = sisiDepan;
+        if (!isValidBalok()) {
+            throw new IllegalArgumentException("Ukuran balok tidak valid");
+        }
     }
 
     // ====== METHOD SELEKTOR ======
@@ -55,6 +50,15 @@ public class Balok extends BangunRuang {
     }
 
     // ====== METHOD LAINNYA ======
+    public boolean isValidBalok() {
+        double p = this.sisiAlas.getPanjang();
+        double l = sisiAlas.getLebar();
+        double t = sisiTegak.getLebar();
+        return (sisiTegak.getPanjang() == l &&
+                sisiDepan.getPanjang() == p &&
+                sisiDepan.getLebar() == t);
+    }
+
     public double getDiagonalRuang(){
         return Math.sqrt(Math.pow(sisiAlas.getPanjang(), 2)
                         + Math.pow(sisiAlas.getLebar(), 2)
