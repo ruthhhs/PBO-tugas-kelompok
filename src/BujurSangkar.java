@@ -36,6 +36,12 @@ public class BujurSangkar extends BangunDatar {
     }
 
     public void printDetail(){
-
+        System.out.println("=== Print Detail ===" );
+        System.out.println("Warna    = " + this.getWarna());
+        System.out.println("Sisi     = " + this.getSisi());
+        System.out.println("Diagonal = " + this.getDiagonal());
+        System.out.println("Keliling = " + this.getKeliling());
+        System.out.println("Luas     = " + this.getLuas());
+        System.out.println("=====================");
     }
 }

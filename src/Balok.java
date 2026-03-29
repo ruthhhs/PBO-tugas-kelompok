@@ -77,6 +77,12 @@ public class Balok extends BangunRuang {
 
     @Override
     public void printDetail(){
+        System.out.println("=== Print Detail ===" );
+        System.out.println("Sisi Panjang = " + sisiAlas.getPanjang());
+        System.out.println("Sisi Lebar   = " + sisiDepan.getLebar());
+        System.out.println("Sisi Tegak   = " + sisiTegak.getLebar());
+        System.out.println("====================" );
+
 
     }
 }

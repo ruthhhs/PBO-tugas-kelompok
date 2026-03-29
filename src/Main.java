@@ -1,36 +1,94 @@
 public class Main {
     public static void main(String[] args) {
-        // check
-        Kubus k = new Kubus(new BujurSangkar("black", 10));
-        System.out.println(k.getSisi().getSisi());
-        System.out.println(k.getLuasPermukaan());
-        System.out.println(k.getVolume());
-        System.out.println(k.getDiagonalRuang());
-        System.out.println(k.getSisi().getDiagonal());
+        /* REALISASI */
 
-        Balok b = new Balok(new PersegiPanjang("black", 20, 5),
-                            new PersegiPanjang("black", 5, 8),
-                            new PersegiPanjang("black", 20, 8));
-        System.out.println(b.getLuasPermukaan());
-        System.out.println(b.getVolume());
-        System.out.println(b.getDiagonalRuang());
-        System.out.println(b.getSisiAlas().getDiagonal());
+        /* BANGUN DATAR */
+        BujurSangkar BS1 = new BujurSangkar();
+        BS1.setSisi(7);
+        BS1.setWarna("Kuning");
+        System.out.println("Diagonal BS1 =  " + BS1.getDiagonal());
+        System.out.println("Keliling BS1 = " + BS1.getKeliling());
+        System.out.println("Luas BS1     = " + BS1.getLuas());
+        BS1.printDetail();
 
-        Balok b1 = new Balok();
-        b1.setSisiAlas(new PersegiPanjang("black", 20, 2));
-        b1.setSisiTegak(new PersegiPanjang("black", 2, 2));
-        b1.setSisiDepan(new PersegiPanjang("black", 20, 2));
-        System.out.println(b1.getVolume());
-        System.out.println(b1.getDiagonalRuang());
-        System.out.println(b1.getSisiAlas().getDiagonal());
-        System.out.println(b1.isValidBalok());
+        PersegiPanjang PP1 = new PersegiPanjang("Biru", 16, 9 );
+        System.out.println("Diagonal PP1 =  " + PP1.getDiagonal());
+        System.out.println("Keliling PP1 = " + PP1.getKeliling());
+        System.out.println("Luas PP1     = " + PP1.getLuas());
+        PP1.printDetail();
 
-        Prisma p = new Prisma(new SegiTiga("black", 6, 4), new PersegiPanjang("black", 10, 5));
-        System.out.println(p.getLuasPermukaan());
-        System.out.println(p.getVolume());
-        System.out.println(p.getSisiTegak().getDiagonal());
+        PersegiPanjang PP2 = new PersegiPanjang();
+        PP2.setWarna("Hijau");
+        PP2.setLebar(15);
+        PP2.setPanjang(20);
+        System.out.println("Diagonal PP2 =  " + PP2.getDiagonal());
+        System.out.println("Keliling PP2 = " + PP2.getKeliling());
+        System.out.println("Luas PP2     = " + PP2.getLuas());
+        PP2.printDetail();
+
+        SegiTiga S1 = new SegiTiga();
+        S1.setAlas(10);
+        S1.setTinggi(12);
+        S1.setWarna("Kuning");
+        System.out.println("Keliling S1 = " + S1.getKeliling());
+        System.out.println("Luas S1     = " + S1.getLuas());
+        S1.printDetail();
+
+
+        /* BANGUN RUANG */
+        Kubus K1 = new Kubus(new BujurSangkar("Hitam", 8));
+        System.out.println("Sisi K1           = " + K1.getSisi().getSisi());
+        System.out.println("Luas Permukaan K1 = " + K1.getLuasPermukaan());
+        System.out.println("Volume K1         = " + K1.getVolume());
+        System.out.println("Diagonal Ruang K1 = " + K1.getDiagonalRuang());
+        System.out.println("Diagonal Sisi K1  = " + K1.getSisi().getDiagonal());
+        K1.printDetail();
+
+        Kubus K2 = new Kubus(BS1);
+        System.out.println("Luas Permukaan K2 = " + K2.getLuasPermukaan());
+        System.out.println("Volume K2         = " + K2.getVolume());
+        System.out.println("Diagonal Ruang K2 = " + K2.getDiagonalRuang());
+        System.out.println("Diagonal Sisi K2  = " + K2.getSisi().getDiagonal());
+        K2.printDetail();
+
+
+        Balok B1 = new Balok(new PersegiPanjang("Hitam", 20, 5),
+                            new PersegiPanjang("Hitam", 5, 8),
+                            new PersegiPanjang("Hitam", 20, 8));
+        B1.printDetail();
+        System.out.println("Luas Permukaan K2 = " + B1.getLuasPermukaan());
+        System.out.println("Volume K2         = " + B1.getVolume());
+        System.out.println("Diagonal Ruang K2 = " + B1.getDiagonalRuang());
+        System.out.println("Diagonal Sisi K2  = " + B1.getSisiAlas().getDiagonal());
+
+        Balok B2 = new Balok();
+        B2.setSisiAlas(new PersegiPanjang("Hitam", 20, 2));
+        B2.setSisiTegak(new PersegiPanjang("Hitam", 2, 2));
+        B2.setSisiDepan(new PersegiPanjang("Hitam", 20, 2));
+        System.out.println(B2.getVolume());
+        System.out.println(B2.getDiagonalRuang());
+        System.out.println(B2.getSisiAlas().getDiagonal());
+        System.out.println(B2.isValidBalok());
+        B2.printDetail();
+
+        // Contoh implementasi Exception
+        // Balok B3 = new Balok(new PersegiPanjang("Hitam", 12, 4), 
+        //                     new PersegiPanjang("Hitam", 4, 6),
+        //                     new PersegiPanjang("Hitam", 12, 4));
+        // System.out.println(B3.isValidBalok());
+
+        Limas L1 = new Limas(new BujurSangkar("Biru", 10), new SegiTiga("Biru", 10, 13));
+        L1.printDetail();
+
+        // Interface
+        System.out.println("Volume Air L1 awal = " + L1.getVolumeAir()); //Volume Air awal
+        L1.setVolumeAir(124);
+        L1.isiAir(322);
+        System.out.println("Volume Air L1 setelah diisi = " + L1.getVolumeAir()); //Volume Air setelah diisi
+        L1.kurangiAir();
+        System.out.println("Volume Air L1 sekarang = " + L1.getVolumeAir()); //Volume Air setelah dikurangi
+        L1.isiAir();
+        System.out.println("Volume Air L1 sekarang = " + L1.getVolumeAir()); //Volume Air setelah diisi 
         
-        SegiTiga s = new SegiTiga("black", 6, 4);
-        System.out.println(s.getKeliling());
     }
 }
