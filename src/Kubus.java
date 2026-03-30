@@ -6,11 +6,12 @@ public class Kubus extends BangunRuang {
     public Kubus(){
         setJumlahSisi(6);
         setJumlahRusuk(12);
+        setVolumeAir(0);
         this.sisi = new BujurSangkar();
     }
     
     public Kubus(BujurSangkar sisi){
-        super(6, 12);
+        super(6, 12, 0);
         this.sisi = sisi;
     }
 
@@ -46,7 +47,6 @@ public class Kubus extends BangunRuang {
         System.out.println("Luas Permukaan = " + this.getLuasPermukaan());
         System.out.println("Volume         = "+ this.getVolume());
         System.out.println("Diagonal Ruang = " + this.getDiagonalRuang());
-        System.out.println("Diagonal Sisi = " + this.getSisi().getDiagonal());
         System.out.println("=====================");
 
     }

@@ -8,13 +8,14 @@ public class Balok extends BangunRuang {
     public Balok(){
         setJumlahSisi(6);
         setJumlahRusuk(12);
+        setVolumeAir(0);
         this.sisiAlas = new PersegiPanjang();
         this.sisiTegak = new PersegiPanjang();
         this.sisiDepan = new PersegiPanjang();
     }
     
     public Balok(PersegiPanjang sisiAlas, PersegiPanjang sisiTegak, PersegiPanjang sisiDepan){
-        super(6, 12);
+        super(6, 12, 0);
         this.sisiAlas = sisiAlas;
         this.sisiTegak = sisiTegak;
         this.sisiDepan = sisiDepan;
@@ -78,9 +79,12 @@ public class Balok extends BangunRuang {
     @Override
     public void printDetail(){
         System.out.println("=== Print Detail ===" );
-        System.out.println("Sisi Panjang = " + sisiAlas.getPanjang());
-        System.out.println("Sisi Lebar   = " + sisiDepan.getLebar());
-        System.out.println("Sisi Tegak   = " + sisiTegak.getLebar());
+        System.out.println("Sisi Panjang   = " + sisiAlas.getPanjang());
+        System.out.println("Sisi Lebar     = " + sisiDepan.getLebar());
+        System.out.println("Sisi Tegak     = " + sisiTegak.getLebar());
+        System.out.println("Luas Permukaan = " + this.getLuasPermukaan());
+        System.out.println("Volume         = "+ this.getVolume());
+        System.out.println("Diagonal Ruang = " + this.getDiagonalRuang());
         System.out.println("====================" );
 
 

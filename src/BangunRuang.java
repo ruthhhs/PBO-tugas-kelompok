@@ -7,12 +7,13 @@ public abstract class BangunRuang implements IAir{
 
     // ====== METHOD KONSTRUKTOR ======
     public BangunRuang() {
-        this(0, 0);
+        this(0, 0, 0);
     }
     
-    public BangunRuang(int jumlahSisi, int jumlahRusuk) {
+    public BangunRuang(int jumlahSisi, int jumlahRusuk, double volumeAir) {
         this.jumlahSisi = jumlahSisi;
         this.jumlahRusuk = jumlahRusuk;
+        this.volumeAir = volumeAir;
         counterBangunRuang ++;
     }
 

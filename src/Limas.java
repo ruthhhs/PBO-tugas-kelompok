@@ -7,15 +7,16 @@ public class Limas extends BangunRuang {
     public Limas(){
         setJumlahSisi(5);
         setJumlahRusuk(9);
+        setVolumeAir(0);
         this.sisiAlas = new BujurSangkar();
         this.sisiTegak = new SegiTiga();
     }
     
     public Limas(BujurSangkar sisiAlas, SegiTiga sisiTegak){
-        super(5, 9);
+        super(5, 9, 0);
         this.sisiAlas = sisiAlas;
         this.sisiTegak = sisiTegak;
-        if (!isValidPrisma()) {
+        if (!isValidLimas()) {
             throw new IllegalArgumentException("Ukuran prisma tidak valid");
         }
     }
@@ -39,7 +40,7 @@ public class Limas extends BangunRuang {
     }
 
     // ====== METHOD LAINNYA ======
-    public boolean isValidPrisma(){
+    public boolean isValidLimas(){
         return sisiAlas.getSisi() == sisiTegak.getAlas();
 
     }

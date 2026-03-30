@@ -3,6 +3,7 @@ public class Main {
         /* REALISASI */
 
         /* BANGUN DATAR */
+        // Bujur Sangkar 
         BujurSangkar BS1 = new BujurSangkar();
         BS1.setSisi(7);
         BS1.setWarna("Kuning");
@@ -11,6 +12,7 @@ public class Main {
         System.out.println("Luas BS1     = " + BS1.getLuas());
         BS1.printDetail();
 
+        //Persegi Panjang dengan Parameter
         PersegiPanjang PP1 = new PersegiPanjang("Biru", 16, 9 );
         System.out.println("Diagonal PP1 =  " + PP1.getDiagonal());
         System.out.println("Keliling PP1 = " + PP1.getKeliling());
@@ -26,6 +28,7 @@ public class Main {
         System.out.println("Luas PP2     = " + PP2.getLuas());
         PP2.printDetail();
 
+        // Segitiga
         SegiTiga S1 = new SegiTiga();
         S1.setAlas(10);
         S1.setTinggi(12);
@@ -36,6 +39,7 @@ public class Main {
 
 
         /* BANGUN RUANG */
+        //Kubus
         Kubus K1 = new Kubus(new BujurSangkar("Hitam", 8));
         System.out.println("Sisi K1           = " + K1.getSisi().getSisi());
         System.out.println("Luas Permukaan K1 = " + K1.getLuasPermukaan());
@@ -51,7 +55,7 @@ public class Main {
         System.out.println("Diagonal Sisi K2  = " + K2.getSisi().getDiagonal());
         K2.printDetail();
 
-
+        //Balok
         Balok B1 = new Balok(new PersegiPanjang("Hitam", 20, 5),
                             new PersegiPanjang("Hitam", 5, 8),
                             new PersegiPanjang("Hitam", 20, 8));
@@ -71,24 +75,29 @@ public class Main {
         System.out.println(B2.isValidBalok());
         B2.printDetail();
 
+    
+        // Limas
+        Limas L1 = new Limas(new BujurSangkar("Biru", 10), new SegiTiga("Biru", 10, 13));
+        System.out.println(L1.isValidLimas());
+        L1.printDetail();
+
+
         // Contoh implementasi Exception
         // Balok B3 = new Balok(new PersegiPanjang("Hitam", 12, 4), 
         //                     new PersegiPanjang("Hitam", 4, 6),
         //                     new PersegiPanjang("Hitam", 12, 4));
-        // System.out.println(B3.isValidBalok());
+        // Limas L2 = new Limas(new BujurSangkar("Putih", 5), new SegiTiga("Putih", 6, 12));
 
-        Limas L1 = new Limas(new BujurSangkar("Biru", 10), new SegiTiga("Biru", 10, 13));
-        L1.printDetail();
-
+        
         // Interface
         System.out.println("Volume Air L1 awal = " + L1.getVolumeAir()); //Volume Air awal
         L1.setVolumeAir(124);
         L1.isiAir(322);
         System.out.println("Volume Air L1 setelah diisi = " + L1.getVolumeAir()); //Volume Air setelah diisi
         L1.kurangiAir();
-        System.out.println("Volume Air L1 sekarang = " + L1.getVolumeAir()); //Volume Air setelah dikurangi
+        System.out.println("Volume Air L1 setelah dikurangi = " + L1.getVolumeAir()); //Volume Air setelah dikurangi
         L1.isiAir();
-        System.out.println("Volume Air L1 sekarang = " + L1.getVolumeAir()); //Volume Air setelah diisi 
+        System.out.println("Volume Air L1 setelah diisi lagi = " + L1.getVolumeAir()); //Volume Air setelah diisi 
         
     }
 }
