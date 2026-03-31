@@ -41,6 +41,13 @@ public class Kubus extends BangunRuang {
 
     @Override
     public void printDetail(){
+        System.out.println("=== Print Detail ===" );
+        System.out.println("Sisi           = " + sisi.getSisi());
+        System.out.println("Luas Permukaan = " + this.getLuasPermukaan());
+        System.out.println("Volume         = "+ this.getVolume());
+        System.out.println("Diagonal Ruang = " + this.getDiagonalRuang());
+        System.out.println("=====================");
 
     }
+
 }

@@ -1,4 +1,4 @@
-public class Balok extends BangunRuang {
+public class Balok extends BangunRuang implements IValidasi{
     // ====== ATRIBUT ======
     private PersegiPanjang sisiAlas;
     private PersegiPanjang sisiTegak;
@@ -18,7 +18,7 @@ public class Balok extends BangunRuang {
         this.sisiAlas = sisiAlas;
         this.sisiTegak = sisiTegak;
         this.sisiDepan = sisiDepan;
-        if (!isValidBalok()) {
+        if (!isValid()) {
             throw new IllegalArgumentException("Ukuran balok tidak valid");
         }
     }
@@ -50,7 +50,7 @@ public class Balok extends BangunRuang {
     }
 
     // ====== METHOD LAINNYA ======
-    public boolean isValidBalok() {
+    public boolean isValid() {
         double p = this.sisiAlas.getPanjang();
         double l = sisiAlas.getLebar();
         double t = sisiTegak.getLebar();
@@ -77,6 +77,15 @@ public class Balok extends BangunRuang {
 
     @Override
     public void printDetail(){
+        System.out.println("=== Print Detail ===" );
+        System.out.println("Sisi Panjang   = " + sisiAlas.getPanjang());
+        System.out.println("Sisi Lebar     = " + sisiDepan.getLebar());
+        System.out.println("Sisi Tegak     = " + sisiTegak.getLebar());
+        System.out.println("Luas Permukaan = " + this.getLuasPermukaan());
+        System.out.println("Volume         = "+ this.getVolume());
+        System.out.println("Diagonal Ruang = " + this.getDiagonalRuang());
+        System.out.println("====================" );
+
 
     }
 }

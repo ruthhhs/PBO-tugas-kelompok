@@ -24,6 +24,8 @@ public abstract class BangunRuang {
         return jumlahRusuk;
     }
 
+    
+
     static public int getCounterBangunRuang() {
         return counterBangunRuang;
     }
@@ -37,8 +39,12 @@ public abstract class BangunRuang {
         this.jumlahRusuk = jumlahRusuk;
     }
 
+
     // ====== METHOD LAINNYA ======
     abstract public double getLuasPermukaan();
     abstract public double getVolume();
     abstract public void printDetail();
+
+    
+    
 }
