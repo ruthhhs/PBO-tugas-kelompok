@@ -1,3 +1,13 @@
+/*
+Anggota Kelompok :
+1. Ruth Septriana Sipangkar   (24060124120024)
+2. Sarifa Nuha Ardanti Jusmar (24060124130082)
+3. Syafira Azka Ramadhani     (24060124130088)
+4. Yasmina Syahidah           (24060124130116)
+
+Kelas : C
+*/
+
 public class BujurSangkar extends BangunDatar {
     // ====== ATRIBUT ======
     private double sisi;
@@ -25,16 +35,19 @@ public class BujurSangkar extends BangunDatar {
     // ====== METHOD LAINNYA ======
     public double getDiagonal(){
         return sisi * Math.sqrt(2);
-    };
+    }
 
+    @Override
     public double getKeliling(){
         return 4 * sisi;
     }
 
+    @Override
     public double getLuas(){
         return sisi * sisi;
     }
 
+    @Override
     public void printDetail(){
         System.out.println("=== Print Detail Bujur Sangkar ===" );
         System.out.println("Warna    = " + this.getWarna());

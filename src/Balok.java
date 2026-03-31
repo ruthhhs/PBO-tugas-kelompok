@@ -1,3 +1,13 @@
+/*
+Anggota Kelompok :
+1. Ruth Septriana Sipangkar   (24060124120024)
+2. Sarifa Nuha Ardanti Jusmar (24060124130082)
+3. Syafira Azka Ramadhani     (24060124130088)
+4. Yasmina Syahidah           (24060124130116)
+
+Kelas : C
+*/
+
 public class Balok extends BangunRuang implements IValidasi{
     // ====== ATRIBUT ======
     private PersegiPanjang sisiAlas;
@@ -50,6 +60,7 @@ public class Balok extends BangunRuang implements IValidasi{
     }
 
     // ====== METHOD LAINNYA ======
+    @Override
     public boolean isValid() {
         double p = this.sisiAlas.getPanjang();
         double l = sisiAlas.getLebar();
@@ -78,9 +89,9 @@ public class Balok extends BangunRuang implements IValidasi{
     @Override
     public void printDetail(){
         System.out.println("=== Print Detail Balok ===" );
-        System.out.println("Sisi Panjang   = " + sisiAlas.getPanjang());
-        System.out.println("Sisi Lebar     = " + sisiDepan.getLebar());
-        System.out.println("Sisi Tegak     = " + sisiTegak.getLebar());
+        System.out.println("Panjang Balok  = " + sisiAlas.getPanjang());
+        System.out.println("Lebar Balok    = " + sisiDepan.getLebar());
+        System.out.println("Tinggi Balok   = " + sisiTegak.getLebar());
         System.out.println("Luas Permukaan = " + this.getLuasPermukaan());
         System.out.println("Volume         = "+ this.getVolume());
         System.out.println("Diagonal Ruang = " + this.getDiagonalRuang());

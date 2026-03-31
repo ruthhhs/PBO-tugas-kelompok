@@ -1,3 +1,13 @@
+/*
+Anggota Kelompok :
+1. Ruth Septriana Sipangkar   (24060124120024)
+2. Sarifa Nuha Ardanti Jusmar (24060124130082)
+3. Syafira Azka Ramadhani     (24060124130088)
+4. Yasmina Syahidah           (24060124130116)
+
+Kelas : C
+*/
+
 public class Main {
     public static void main(String[] args) {
          System.out.println("=== IMPLEMENTASI SISTEM GEOMETRIK BANGUN DATAR DAN RUANG ===\n");
@@ -84,18 +94,18 @@ public class Main {
         L1.printDetail();
 
         // Interface
-        System.out.println("\n=== Implementasi Interface ===");
+        System.out.println("=== Implementasi Interface ===");
         System.out.println("Apakah Limas L1 valid? : " + L1.isValid());
         System.out.println("Apakah Balok B1 valid? : " + B1.isValid());
         System.out.println("Apakah Balok B2 valid? : " + B1.isValid());
 
         // Method Statis
-        System.out.println("\n=== Implementasi Methode Static ===");
+        System.out.println("\n=== Implementasi Method Static ===");
         System.out.println("Jumlah Bangun Datar : " + BangunDatar.getCounterBangunDatar());
         System.out.println("Jumlah Bangun Ruang : " + BangunRuang.getCounterBangunRuang());
 
         // Contoh implementasi Exception
-        System.out.println("\n=== Implementasi Methode dengan Exception ===");
+        System.out.println("\n=== Implementasi Method dengan Exception ===");
         Balok B3 = new Balok(new PersegiPanjang("Hitam", 12, 4), 
                             new PersegiPanjang("Hitam", 4, 6),
                             new PersegiPanjang("Hitam", 12, 4));

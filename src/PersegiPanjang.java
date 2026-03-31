@@ -1,3 +1,13 @@
+/*
+Anggota Kelompok :
+1. Ruth Septriana Sipangkar   (24060124120024)
+2. Sarifa Nuha Ardanti Jusmar (24060124130082)
+3. Syafira Azka Ramadhani     (24060124130088)
+4. Yasmina Syahidah           (24060124130116)
+
+Kelas : C
+*/
+
 public class PersegiPanjang extends BangunDatar {
     // ====== ATRIBUT ======
     private double panjang;
@@ -35,22 +45,25 @@ public class PersegiPanjang extends BangunDatar {
     // ====== METHOD LAINNYA ======
     public double getDiagonal(){
         return Math.sqrt(Math.pow(panjang, 2) + Math.pow(lebar, 2));
-    };
+    }
 
+    @Override
     public double getKeliling(){
         return 2 * (panjang + lebar);
     }
 
+    @Override
     public double getLuas(){
         return panjang * lebar;
     }
 
+    @Override
     public void printDetail(){
         System.out.println("=== Print Detail Persegi Panjang ===" );
         System.out.println("Warna    = " + this.getWarna());
         System.out.println("Panjang  = " + this.getPanjang());
         System.out.println("Lebar    = " + this.getLebar());
-        System.out.println("Diagonal =  " + this.getDiagonal());
+        System.out.println("Diagonal = " + this.getDiagonal());
         System.out.println("Keliling = " + this.getKeliling());
         System.out.println("Luas     = " + this.getLuas());
         System.out.println();

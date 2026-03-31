@@ -1,3 +1,13 @@
+/*
+Anggota Kelompok :
+1. Ruth Septriana Sipangkar   (24060124120024)
+2. Sarifa Nuha Ardanti Jusmar (24060124130082)
+3. Syafira Azka Ramadhani     (24060124130088)
+4. Yasmina Syahidah           (24060124130116)
+
+Kelas : C
+*/
+
 public class Kubus extends BangunRuang {
     // ====== ATRIBUT ======
     private BujurSangkar sisi;
@@ -42,12 +52,10 @@ public class Kubus extends BangunRuang {
     @Override
     public void printDetail(){
         System.out.println("=== Print Detail Kubus ===" );
-        System.out.println("Sisi           = " + sisi.getSisi());
+        System.out.println("Panjang Sisi   = " + sisi.getSisi());
         System.out.println("Luas Permukaan = " + this.getLuasPermukaan());
-        System.out.println("Volume         = "+ this.getVolume());
+        System.out.println("Volume         = " + this.getVolume());
         System.out.println("Diagonal Ruang = " + this.getDiagonalRuang());
         System.out.println();
-
     }
-
 }
