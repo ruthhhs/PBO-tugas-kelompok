@@ -1,4 +1,4 @@
-public class Balok extends BangunRuang {
+public class Balok extends BangunRuang implements IValidasi{
     // ====== ATRIBUT ======
     private PersegiPanjang sisiAlas;
     private PersegiPanjang sisiTegak;
@@ -8,18 +8,17 @@ public class Balok extends BangunRuang {
     public Balok(){
         setJumlahSisi(6);
         setJumlahRusuk(12);
-        setVolumeAir(0);
         this.sisiAlas = new PersegiPanjang();
         this.sisiTegak = new PersegiPanjang();
         this.sisiDepan = new PersegiPanjang();
     }
     
     public Balok(PersegiPanjang sisiAlas, PersegiPanjang sisiTegak, PersegiPanjang sisiDepan){
-        super(6, 12, 0);
+        super(6, 12);
         this.sisiAlas = sisiAlas;
         this.sisiTegak = sisiTegak;
         this.sisiDepan = sisiDepan;
-        if (!isValidBalok()) {
+        if (!isValid()) {
             throw new IllegalArgumentException("Ukuran balok tidak valid");
         }
     }
@@ -51,7 +50,7 @@ public class Balok extends BangunRuang {
     }
 
     // ====== METHOD LAINNYA ======
-    public boolean isValidBalok() {
+    public boolean isValid() {
         double p = this.sisiAlas.getPanjang();
         double l = sisiAlas.getLebar();
         double t = sisiTegak.getLebar();

@@ -6,12 +6,11 @@ public class Kubus extends BangunRuang {
     public Kubus(){
         setJumlahSisi(6);
         setJumlahRusuk(12);
-        setVolumeAir(0);
         this.sisi = new BujurSangkar();
     }
     
     public Kubus(BujurSangkar sisi){
-        super(6, 12, 0);
+        super(6, 12);
         this.sisi = sisi;
     }
 

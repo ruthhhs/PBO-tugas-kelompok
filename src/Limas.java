@@ -1,4 +1,4 @@
-public class Limas extends BangunRuang {
+public class Limas extends BangunRuang implements IValidasi{
     // ====== ATRIBUT ======
     private BujurSangkar sisiAlas;
     private SegiTiga sisiTegak;
@@ -7,16 +7,15 @@ public class Limas extends BangunRuang {
     public Limas(){
         setJumlahSisi(5);
         setJumlahRusuk(9);
-        setVolumeAir(0);
         this.sisiAlas = new BujurSangkar();
         this.sisiTegak = new SegiTiga();
     }
     
     public Limas(BujurSangkar sisiAlas, SegiTiga sisiTegak){
-        super(5, 9, 0);
+        super(5, 9);
         this.sisiAlas = sisiAlas;
         this.sisiTegak = sisiTegak;
-        if (!isValidLimas()) {
+        if (!isValid()) {
             throw new IllegalArgumentException("Ukuran prisma tidak valid");
         }
     }
@@ -40,7 +39,7 @@ public class Limas extends BangunRuang {
     }
 
     // ====== METHOD LAINNYA ======
-    public boolean isValidLimas(){
+    public boolean isValid(){
         return sisiAlas.getSisi() == sisiTegak.getAlas();
 
     }

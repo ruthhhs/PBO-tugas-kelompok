@@ -72,13 +72,12 @@ public class Main {
         System.out.println(B2.getVolume());
         System.out.println(B2.getDiagonalRuang());
         System.out.println(B2.getSisiAlas().getDiagonal());
-        System.out.println(B2.isValidBalok());
+        System.out.println(B2.isValid());
         B2.printDetail();
 
     
         // Limas
         Limas L1 = new Limas(new BujurSangkar("Biru", 10), new SegiTiga("Biru", 10, 13));
-        System.out.println(L1.isValidLimas());
         L1.printDetail();
 
 
@@ -90,14 +89,8 @@ public class Main {
 
         
         // Interface
-        System.out.println("Volume Air L1 awal = " + L1.getVolumeAir()); //Volume Air awal
-        L1.setVolumeAir(124);
-        L1.isiAir(322);
-        System.out.println("Volume Air L1 setelah diisi = " + L1.getVolumeAir()); //Volume Air setelah diisi
-        L1.kurangiAir();
-        System.out.println("Volume Air L1 setelah dikurangi = " + L1.getVolumeAir()); //Volume Air setelah dikurangi
-        L1.isiAir();
-        System.out.println("Volume Air L1 setelah diisi lagi = " + L1.getVolumeAir()); //Volume Air setelah diisi 
-        
+        System.out.println("Apakah Limas L1 valid? " + L1.isValid());
+        System.out.println("Apakah Balok B1 valid? " + B1.isValid());
+        System.out.println("Apakah Balok B2 valid? " + B1.isValid());
     }
 }
