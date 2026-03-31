@@ -43,13 +43,13 @@ public class SegiTiga extends BangunDatar {
     }
 
     public void printDetail(){
-        System.out.println("=== Print Detail ===" );
+        System.out.println("=== Print Detail Segi Tiga ===" );
         System.out.println("Warna    = " + this.getWarna());
         System.out.println("Alas     = " + this.getAlas());
         System.out.println("Tinggi   = " + this.getTinggi());
         System.out.println("Keliling = " + this.getKeliling());
         System.out.println("Luas     = " + this.getLuas());
-        System.out.println("=====================");
+        System.out.println();
     }
         
     

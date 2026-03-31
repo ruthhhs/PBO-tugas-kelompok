@@ -46,14 +46,14 @@ public class PersegiPanjang extends BangunDatar {
     }
 
     public void printDetail(){
-        System.out.println("=== Print Detail ===" );
+        System.out.println("=== Print Detail Persegi Panjang ===" );
         System.out.println("Warna    = " + this.getWarna());
         System.out.println("Panjang  = " + this.getPanjang());
         System.out.println("Lebar    = " + this.getLebar());
         System.out.println("Diagonal =  " + this.getDiagonal());
         System.out.println("Keliling = " + this.getKeliling());
         System.out.println("Luas     = " + this.getLuas());
-        System.out.println("=====================");
+        System.out.println();
         
     }
 }

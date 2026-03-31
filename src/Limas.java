@@ -59,12 +59,12 @@ public class Limas extends BangunRuang implements IValidasi{
     
     @Override
     public void printDetail(){
-        System.out.println("=== Print Detail ===" );
+        System.out.println("=== Print Detail Limas ===" );
         System.out.println("Sisi Alas Limas   = " + sisiAlas.getSisi());
         System.out.println("Sisi Tinggi Limas = " + getTinggi());
         System.out.println("Luas Permukaan    = " + getLuasPermukaan() );
         System.out.println("Volume            = " + getVolume());
-        System.out.println("====================" );
+        System.out.println();
 
     }
 }

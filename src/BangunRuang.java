@@ -44,7 +44,4 @@ public abstract class BangunRuang {
     abstract public double getLuasPermukaan();
     abstract public double getVolume();
     abstract public void printDetail();
-
-    
-    
 }
